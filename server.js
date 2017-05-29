@@ -39,6 +39,7 @@
 		const activity = {
 			name: req.body.name,
 			sport: req.body.sport,
+			location: req.body.location,
 			description: req.body.description,
 			user: {
 				name: req.body.user_name,
