@@ -41,8 +41,8 @@
 			sport: req.body.sport,
 			description: req.body.description,
 			user: {
-				name: req.body.username,
-				picture: req.body.picture,
+				name: req.body.user_name,
+				picture: req.body.user_picture,
 			},
 			date: new Date(),
 		};
