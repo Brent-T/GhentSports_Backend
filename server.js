@@ -37,8 +37,14 @@
 
 	app.post('/activity', (req, res) => {
 		const activity = {
-			name : req.body.name,
-			date: new Date()
+			name: req.body.name,
+			sport: req.body.sport,
+			description: req.body.description,
+			user: {
+				name: req.body.username,
+				picture: req.body.picture,
+			},
+			date: new Date(),
 		};
 
 		api.addActivity(activity)
