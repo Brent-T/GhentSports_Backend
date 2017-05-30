@@ -12,9 +12,12 @@ class ActivityApi {
 				if(err) reject('Couldn\'t connect to database');
 				else {
 					const collection = db.collection(this.collectionName);
-					collection.find({}).toArray()
-						.then(activities => resolve(activities))
-						.catch(error => reject('Couldn\'t find activities'));
+					collection
+						.find({})
+						.sort('date', -1)
+						.toArray()
+							.then(activities => resolve(activities))
+							.catch(error => reject('Couldn\'t find activities'));
 				}
 				db.close();
 			});
