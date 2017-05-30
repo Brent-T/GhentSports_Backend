@@ -42,6 +42,7 @@
 			location: req.body.location,
 			description: req.body.description,
 			user: {
+				id: req.body.user_id,				
 				name: req.body.user_name,
 				picture: req.body.user_picture,
 			},
